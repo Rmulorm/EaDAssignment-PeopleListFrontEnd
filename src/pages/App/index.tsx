@@ -1,8 +1,9 @@
 import React from 'react';
 
-import ListWithController from '../../components/ListWithController';
-
 import './styles.css';
+
+import ListWithController from '../../components/ListWithController';
+import TabsWrapper from '../../components/TabsWrapper';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
       </header>
 
       <body>
-        <ListWithController />
+        <TabsWrapper />
       </body>
     </div>
   );

@@ -1,0 +1,77 @@
+.PeopleList {
+  width: 100%;
+  max-width: inherit;
+
+  height: 100%;
+  max-height: inherit;
+
+  display: flex;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  padding: 30px 30px;
+
+  justify-content: center;
+}
+
+.PeopleList ul {
+  height: 100%;
+  max-height: inherit;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  list-style: none;
+}
+
+.PeopleList ul li {
+  background: #fff;
+  padding: 24px 24px 12px 24px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.PeopleList ul li p {
+  display: flex;
+
+  color: #737380;
+  line-height: 21px;
+  font-size: 16px;
+  vertical-align: middle;
+
+  margin-bottom: 16px;
+}
+
+.PeopleList ul li strong {
+  display: block;
+  margin-right: 4px;
+  color: #41414d;
+}
+
+.PeopleList .Name h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.PeopleList .PersonalInformation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.PeopleList .PersonalInformation strong {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.PeopleList .PersonalInformation .IdentificationNumber {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.PeopleList .PersonalInformation .BirthInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

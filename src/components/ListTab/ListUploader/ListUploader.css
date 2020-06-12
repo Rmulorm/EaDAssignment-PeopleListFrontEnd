@@ -1,5 +1,5 @@
 .ListUploader {
-  height: 25vh;
+  height: 40vh;
 
   display: flex;
   flex-direction: column;
@@ -8,11 +8,21 @@
 
   margin: 12px 12px;
 
+  border-radius: 8px;
+  padding: 12px 12px;
+}
+
+.ListUploader form {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
   color: #333;
   border: 1px solid #dcdce6;
   border-radius: 8px;
   padding: 12px 12px;
-
 }
 
 .Uploader {
@@ -22,8 +32,17 @@
   justify-content: space-between;
 }
 
+.ListUploader h1 {
+  text-align: center;
+  line-height: 1.2;
+}
+
 form input {
   width: 70%;
+}
+
+form label {
+  margin-bottom: 15px;
 }
 
 button {
@@ -39,6 +58,13 @@ button {
   border: 0;
   border-radius: 8px;
   margin-left: 15px;
+
+  transition: opacity 0.2s;
+  transition: filter 0.2s;
+}
+
+button:disabled {
+  background-color: gray;
 
   transition: opacity 0.2s;
   transition: filter 0.2s;

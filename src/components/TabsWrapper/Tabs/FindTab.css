@@ -1,0 +1,39 @@
+.Controllers {
+  height: 8vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin: 12px 12px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+form input {
+  width: 15vw;
+  height: 6vh;
+  color: #333;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+  padding: 12px 12px;
+}
+
+button {
+  width: 60px;
+  height: 6vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e02041;
+
+  border: 0;
+  border-radius: 8px;
+  margin-left: 15px;
+
+  transition: opacity 0.2s;
+  transition: filter 0.2s;
+}
