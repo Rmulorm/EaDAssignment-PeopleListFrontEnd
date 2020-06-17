@@ -37,3 +37,24 @@ button {
   transition: opacity 0.2s;
   transition: filter 0.2s;
 }
+
+.react-date-picker:not(:first-child) {
+  margin-left: 15px;
+}
+
+.react-date-picker .react-date-picker__wrapper {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+}
+
+.react-date-picker .react-date-picker__wrapper .react-date-picker__inputGroup {
+  font: 400 18px Roboto, sans-serif;
+
+  margin-left: 15px;
+}
+
+.react-date-picker .react-date-picker__wrapper .react-date-picker__button {
+  margin-left: 0px;
+}

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useEffect, FormEvent } from 'react';
 import DatePicker from 'react-date-picker';
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch, FiCalendar } from 'react-icons/fi';
 
 import './FindTab.css'
 
@@ -65,10 +65,12 @@ const FindBirthDayTab: FunctionComponent = () => {
         <div className="Controllers" >
           <DatePicker
             onChange={(date) => handleDateChange(date, setBeginDate)}
-            value={beginDate} />
+            value={beginDate}
+            calendarIcon={<FiCalendar />} />
           <DatePicker
             onChange={(date) => handleDateChange(date, setEndDate)}
-            value={endDate} />
+            value={endDate}
+            calendarIcon={<FiCalendar />} />
           <button type="submit">
             <FiSearch size={25} color="#fff" />
           </button>
