@@ -14,7 +14,7 @@ const FindCpfTab: FunctionComponent = () => {
 
   useEffect(() => {
     updateList();
-  });
+  }, []);
 
   const updateList = async () => {
     await api.get<Person[]>('list', { params: {
@@ -33,13 +33,13 @@ const FindCpfTab: FunctionComponent = () => {
       });
       setListData(receivedList);
     });
-  }
+  };
 
   const handleFormSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
     updateList();
-  }
+  };
 
   return(
     <div style={ {

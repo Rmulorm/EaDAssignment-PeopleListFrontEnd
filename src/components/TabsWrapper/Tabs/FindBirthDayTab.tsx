@@ -16,7 +16,7 @@ const FindBirthDayTab: FunctionComponent = () => {
 
   useEffect(() => {
     updateList();
-  });
+  }, []);
 
   const updateList = async () => {
     await api.get<Person[]>('list', { params: {
@@ -36,13 +36,13 @@ const FindBirthDayTab: FunctionComponent = () => {
       });
       setListData(receivedList);
     });
-  }
+  };
 
   const handleFormSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
     updateList();
-  }
+  };
 
   const handleDateChange = (newDate: Date | Date[], dateSetter: Function) => {
     if (Array.isArray(newDate)) {

@@ -14,7 +14,7 @@ const FindNameTab: FunctionComponent = () => {
 
   useEffect(() => {
     updateList();
-  });
+  }, []);
 
   const updateList = async () => {
     await api.get<Person[]>('list', { params: {
@@ -33,7 +33,7 @@ const FindNameTab: FunctionComponent = () => {
       });
       setListData(receivedList);
     });
-  }
+  };
 
   const handleFormSubmit = async (event: FormEvent) => {
     event.preventDefault();

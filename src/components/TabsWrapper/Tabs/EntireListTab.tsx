@@ -11,7 +11,7 @@ const EntireListTab: FunctionComponent = () => {
   useEffect(() => {
     updateList();
   }, []);
-  
+
   const updateList = async () => {
     api.get<Person[]>('list')
     .then((response) => {
@@ -27,7 +27,7 @@ const EntireListTab: FunctionComponent = () => {
       });
       setListData(receivedList);
     });
-  }
+  };
 
   return(
     <div style={ {
