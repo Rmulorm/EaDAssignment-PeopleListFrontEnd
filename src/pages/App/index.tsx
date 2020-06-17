@@ -2,7 +2,6 @@ import React from 'react';
 
 import './styles.css';
 
-import ListWithController from '../../components/ListWithController';
 import TabsWrapper from '../../components/TabsWrapper';
 
 function App() {

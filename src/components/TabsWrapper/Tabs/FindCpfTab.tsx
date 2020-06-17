@@ -5,7 +5,7 @@ import './FindTab.css'
 
 import api from '../../../services/api';
 import Person from '../../../types/Person';
-import PeopleList from '../../ListTab/PeopleList/PeopleList';
+import PeopleList from '../PeopleList/PeopleList';
 
 const FindCpfTab: FunctionComponent = () => {
 
@@ -14,7 +14,7 @@ const FindCpfTab: FunctionComponent = () => {
 
   useEffect(() => {
     updateList();
-  }, []);
+  });
 
   const updateList = async () => {
     await api.get<Person[]>('list', { params: {

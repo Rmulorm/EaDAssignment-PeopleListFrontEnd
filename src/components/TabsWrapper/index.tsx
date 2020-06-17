@@ -32,7 +32,6 @@ const TabsWrapper: FunctionComponent = () => {
   const classes = useStyles();
 
   const[isListEmpty, setListEmpty] = useState<boolean>(true);
-  const[isListUpdated, setListUpdated] = useState<boolean>(false);
   const[tabsValue, setTabsValue] = useState<string>("uploadList");
 
   useEffect(() => {
@@ -46,14 +45,12 @@ const TabsWrapper: FunctionComponent = () => {
         setListEmpty(false);
         setTabsValue("entireList");
       }
-      setListUpdated(true);
     });
   }
 
   const handleTabChange = (event: React.ChangeEvent<{}>, newValue: string) => {
     event.preventDefault();
     setTabsValue(newValue);
-    setListUpdated(false);
   }
 
   return(
@@ -65,11 +62,25 @@ const TabsWrapper: FunctionComponent = () => {
           value={tabsValue}
           onChange={handleTabChange}
           className={classes.tabs} >
-          <Tab label="Carregar Lista" value="uploadList" />
-          <Tab label="Lista Completa" value="entireList" />
-          <Tab label="Encontrar por CPF" value="cpfQuery" />
-          <Tab label="Encontrar por Name" value="nameQuery" />
-          <Tab label="Encontrar por Data de Nascimento" value="birthDayQuery" />
+          <Tab
+            label="Carregar Lista"
+            value="uploadList" />
+          <Tab
+            label="Lista Completa"
+            value="entireList"
+            disabled={isListEmpty} />
+          <Tab
+            label="Encontrar por CPF"
+            value="cpfQuery"
+            disabled={isListEmpty} />
+          <Tab
+            label="Encontrar por Name"
+            value="nameQuery"
+            disabled={isListEmpty} />
+          <Tab
+            label="Encontrar por Data de Nascimento"
+            value="birthDayQuery"
+            disabled={isListEmpty} />
         </Tabs>
         <TabPanel value={tabsValue} index="uploadList">
           <UploadTab

@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 
 
-import ListUploader from '../../ListTab/ListUploader/ListUploader';
+import ListUploader from '../ListUploader/ListUploader';
 
 interface UploadTabProps {
   isListEmpty: boolean,

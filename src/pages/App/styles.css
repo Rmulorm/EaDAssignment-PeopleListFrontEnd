@@ -6,6 +6,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  background: #f9f9f9;
 }
 
 .app-container header {
@@ -13,6 +15,8 @@
   height: 15vh;
 
   align-items: center;
+
+  background: #f9f9f9;
 }
 
 .app-container header h1,
@@ -29,4 +33,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: #f9f9f9;
 }

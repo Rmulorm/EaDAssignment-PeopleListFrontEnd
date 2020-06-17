@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState, useEffect } from 'react';
 
 import api from '../../../services/api';
 import Person from '../../../types/Person';
-import PeopleList from '../../ListTab/PeopleList/PeopleList';
+import PeopleList from '../PeopleList/PeopleList';
 
 const EntireListTab: FunctionComponent = () => {
 
@@ -13,7 +13,7 @@ const EntireListTab: FunctionComponent = () => {
   }, []);
   
   const updateList = async () => {
-    await api.get<Person[]>('list')
+    api.get<Person[]>('list')
     .then((response) => {
       const receivedList = new Array<Person>();
       response.data.forEach((person) => {
